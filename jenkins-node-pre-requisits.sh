@@ -10,6 +10,14 @@ set -u  # Exit on undefined variables
 echo "########### Jenkins Node Configuration Started ###########"
 echo ""
 
+# Instll Docker and Git
+echo "===== Installing Docker and Git ====="
+sudo dnf install docker git -y
+docker --version
+git --version
+echo "✓ docker and git installed successfully"
+echo ""
+
 # Install Java 17
 echo "===== Installing Java 17 ====="
 sudo dnf install -y java-17-openjdk
